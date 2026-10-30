@@ -1,5 +1,5 @@
 {
-  "name": "@frontal-labs/upgrade-risk",
+  "name": "@frontal/upgrade-risk",
   "version": "0.0.0",
   "description": "GitHub Action to post upgrade risk analysis comments on Dependabot/Renovate PRs",
   "license": "MIT",
@@ -9,42 +9,42 @@
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
-    "build": "bun build src/index.ts --target=node --outfile dist/index.js",
-    "build:action": "bun build src/action.ts --target=node --outfile dist/index.js",
+    "build": "bun build src/action.ts --target=node --outfile dist/index.js",
+    "build:cli": "bun build src/cli.ts --target=node --outfile dist/cli.js",
     "dev": "bun run src/cli.ts",
-    "lint": "biome lint .",
-    "format": "biome format .",
-    "format:write": "biome format --write .",
+    "eval": "bun run src/eval.ts",
+    "digest": "bun run src/digest.ts",
+    "lint": "biome ci .",
+    "format": "biome format --write .",
     "typecheck": "tsc --noEmit",
     "test": "bun test",
-    "eval": "bun run src/eval.ts",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish",
     "prepare": "husky"
   },
   "dependencies": {
     "@octokit/rest": "^21.0.2",
     "@t3-oss/env-core": "^0.13.11",
+    "semver": "^7.6.3",
+    "typescript": "^5.6.3",
     "zod": "^4.6.7"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@changesets/cli": "^2.27.9",
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@types/bun": "latest",
     "@types/node": "^22.0.0",
+    "@types/semver": "^7.5.8",
     "husky": "^9.1.6",
-    "lint-staged": "^15.2.10",
-    "typescript": "^5.6.3",
-    "@changesets/cli": "^2.27.9"
+    "lint-staged": "^15.2.10"
   },
   "lint-staged": {
-    "*.{js,ts,json}": [
-      "biome format --write",
-      "biome lint --apply"
-    ]
+    "*.{js,ts,json}": ["biome check --write --no-errors-on-unmatched"]
   },
   "engines": {
     "bun": ">=1.0.0",
