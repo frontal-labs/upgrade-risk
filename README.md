@@ -9,6 +9,7 @@ GitHub Action to post upgrade risk analysis comments on Dependabot or Renovate p
 - Finds usages with TypeScript compiler API
 - Scores risk as `safe`, `review`, `risky`, or `unknown`
 - Posts a single sticky PR comment and uploads `risk.json` as artifact
+- Environment variables validated with `@t3-oss/env-core` + Zod
 - Works with zero API keys required
 
 ## Usage
@@ -53,6 +54,19 @@ jobs:
 | --- | --- |
 | `risk` | Overall risk level |
 | `report-path` | Path to `risk.json` |
+
+## Environment
+
+Environment variables are validated via `src/env.ts` using `@t3-oss/env-core` with Zod. Supported variables: `GH_TOKEN`, `GITHUB_TOKEN`, `GH_REPOSITORY`, `GITHUB_REPOSITORY`.
+
+## Development
+
+```bash
+bun install
+bun test
+bun run lint
+bun run typecheck
+```
 
 ## License
 

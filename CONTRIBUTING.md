@@ -11,6 +11,10 @@ bun run lint
 bun run typecheck
 ```
 
+## Environment Variables
+
+Environment variables are validated with `@t3-oss/env-core` and Zod in `src/env.ts`. All `process.env` usage should flow through `env.ts`.
+
 ## Commit Message Format
 
 We use [Conventional Commits](https://www.conventionalcommits.org/). Commit messages are linted with commitlint.
