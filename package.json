@@ -1,5 +1,5 @@
 {
-  "name": "@frontal/upgrade-risk",
+  "name": "@frontal-labs/upgrade-risk",
   "version": "0.0.0",
   "description": "GitHub Action to post upgrade risk analysis comments on Dependabot/Renovate PRs",
   "license": "MIT",
@@ -25,7 +25,9 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@octokit/rest": "^21.0.2"
+    "@octokit/rest": "^21.0.2",
+    "@t3-oss/env-core": "^0.13.11",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
