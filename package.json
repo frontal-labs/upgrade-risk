@@ -1,0 +1,51 @@
+{
+  "name": "@frontal/upgrade-risk",
+  "version": "0.0.0",
+  "description": "GitHub Action to post upgrade risk analysis comments on Dependabot/Renovate PRs",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "upgrade-risk": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build src/index.ts --target=node --outfile dist/index.js",
+    "build:action": "bun build src/action.ts --target=node --outfile dist/index.js",
+    "dev": "bun run src/cli.ts",
+    "lint": "biome lint .",
+    "format": "biome format .",
+    "format:write": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "eval": "bun run src/eval.ts",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.0.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@types/bun": "latest",
+    "@types/node": "^22.0.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "typescript": "^5.6.3",
+    "@changesets/cli": "^2.27.9"
+  },
+  "lint-staged": {
+    "*.{js,ts,json}": [
+      "biome format --write",
+      "biome lint --apply"
+    ]
+  },
+  "engines": {
+    "bun": ">=1.0.0",
+    "node": ">=18"
+  }
+}
