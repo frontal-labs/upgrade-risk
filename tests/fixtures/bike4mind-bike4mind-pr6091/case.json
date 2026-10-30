@@ -1,0 +1,15 @@
+{
+  "id": "bike4mind-bike4mind-pr6091",
+  "repo": "Bike4Mind/bike4mind",
+  "pr": 6091,
+  "expected": "safe",
+  "expectedNote": "Patch bump, 32 checks passed; the PR was rebased and lockfile regenerated but no breakage (https://github.com/Bike4Mind/bike4mind/pull/6091).",
+  "sources": "https://github.com/Bike4Mind/bike4mind/pull/6091",
+  "updates": [
+    {
+      "name": "i18next-http-backend",
+      "from": "4.0.2",
+      "to": "4.0.4"
+    }
+  ]
+}

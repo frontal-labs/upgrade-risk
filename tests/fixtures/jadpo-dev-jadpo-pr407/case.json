@@ -1,0 +1,15 @@
+{
+  "id": "jadpo-dev-jadpo-pr407",
+  "repo": "jadpo-dev/jadpo",
+  "pr": 407,
+  "expected": "review",
+  "expectedNote": "A 'plan' check failed on the PR (not verified as TS-related) and it was merged; TS 7 major with no fix commit (https://github.com/jadpo-dev/jadpo/pull/407).",
+  "sources": "https://github.com/jadpo-dev/jadpo/pull/407",
+  "updates": [
+    {
+      "name": "typescript",
+      "from": "6.0.3",
+      "to": "7.0.2"
+    }
+  ]
+}

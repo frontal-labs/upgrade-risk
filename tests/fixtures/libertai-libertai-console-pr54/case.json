@@ -1,0 +1,15 @@
+{
+  "id": "libertai-libertai-console-pr54",
+  "repo": "Libertai/libertai-console",
+  "pr": 54,
+  "expected": "safe",
+  "expectedNote": "Patch bump, all 4 checks passed and no fix (https://github.com/Libertai/libertai-console/pull/54).",
+  "sources": "https://github.com/Libertai/libertai-console/pull/54",
+  "updates": [
+    {
+      "name": "source-map-js",
+      "from": "1.2.1",
+      "to": "1.2.2"
+    }
+  ]
+}

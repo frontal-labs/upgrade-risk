@@ -1,0 +1,15 @@
+{
+  "id": "microsoft-kiota-pr8486",
+  "repo": "microsoft/kiota",
+  "pr": 8486,
+  "expected": "review",
+  "expectedNote": "Merged with 335 passing checks and no fix commit; TS major with no in-repo breakage evidence (https://github.com/microsoft/kiota/pull/8486).",
+  "sources": "https://github.com/microsoft/kiota/pull/8486",
+  "updates": [
+    {
+      "name": "typescript",
+      "from": "5.8.2",
+      "to": "6.0.3"
+    }
+  ]
+}

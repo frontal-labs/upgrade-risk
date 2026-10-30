@@ -1,0 +1,15 @@
+{
+  "id": "troll-house-studios-trollytrolls_gdd-pr1",
+  "repo": "Troll-House-Studios/trollytrolls_gdd",
+  "pr": 1,
+  "expected": "review",
+  "expectedNote": "TS 7 major merged with no CI checks run and no comments, so no evidence either way (https://github.com/Troll-House-Studios/trollytrolls_gdd/pull/1).",
+  "sources": "https://github.com/Troll-House-Studios/trollytrolls_gdd/pull/1",
+  "updates": [
+    {
+      "name": "typescript",
+      "from": "5.9.3",
+      "to": "7.0.2"
+    }
+  ]
+}

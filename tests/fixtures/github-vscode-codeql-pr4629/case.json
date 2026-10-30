@@ -1,0 +1,15 @@
+{
+  "id": "github-vscode-codeql-pr4629",
+  "repo": "github/vscode-codeql",
+  "pr": 4629,
+  "expected": "safe",
+  "expectedNote": "Minor bump, 17 checks passed; merge was retried after a base-branch change, no breakage (https://github.com/github/vscode-codeql/pull/4629).",
+  "sources": "https://github.com/github/vscode-codeql/pull/4629",
+  "updates": [
+    {
+      "name": "@typescript-eslint/parser",
+      "from": "8.71.0",
+      "to": "8.72.0"
+    }
+  ]
+}

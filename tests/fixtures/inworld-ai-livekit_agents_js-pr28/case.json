@@ -1,0 +1,15 @@
+{
+  "id": "inworld-ai-livekit_agents_js-pr28",
+  "repo": "inworld-ai/livekit_agents_js",
+  "pr": 28,
+  "expected": "risky",
+  "expectedNote": "Copilot review found zod v4 changed output of 4 tests (snapshot agents/src/llm/__snapshots__/zod-utils.test.ts.snap, tool_context.test.ts) and a fix commit ac0a4fee adapted them (https://github.com/inworld-ai/livekit_agents_js/pull/28). Expected risky as the changed zod behaviour is evidently used by the tests.",
+  "sources": "https://github.com/inworld-ai/livekit_agents_js/pull/28",
+  "updates": [
+    {
+      "name": "zod",
+      "from": "3.25.76",
+      "to": "4.6.6"
+    }
+  ]
+}

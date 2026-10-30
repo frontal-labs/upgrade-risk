@@ -1,0 +1,15 @@
+{
+  "id": "slord399-monitorss-pr192",
+  "repo": "slord399/MonitoRSS",
+  "pr": 192,
+  "expected": "review",
+  "expectedNote": "Merged with no failing checks; the dep second-opinion bot flagged it as a production major needing review (https://github.com/slord399/MonitoRSS/pull/192).",
+  "sources": "https://github.com/slord399/MonitoRSS/pull/192",
+  "updates": [
+    {
+      "name": "@nestjs/event-emitter",
+      "from": "3.1.0",
+      "to": "12.0.1"
+    }
+  ]
+}

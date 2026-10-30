@@ -1,0 +1,15 @@
+{
+  "id": "xhoang0509-hotel-booking-pr135",
+  "repo": "xhoang0509/hotel-booking",
+  "pr": 135,
+  "expected": "review",
+  "expectedNote": "A 'test' check failed on the PR and the PR was merged anyway; cause not diagnosed, so higher risk chosen (https://github.com/xhoang0509/hotel-booking/pull/135).",
+  "sources": "https://github.com/xhoang0509/hotel-booking/pull/135",
+  "updates": [
+    {
+      "name": "next",
+      "from": "16.4.2",
+      "to": "16.4.3"
+    }
+  ]
+}

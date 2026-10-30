@@ -1,0 +1,15 @@
+{
+  "id": "cacapice-agentledger-pr23",
+  "repo": "Cacapice/AgentLedger",
+  "pr": 23,
+  "expected": "review",
+  "expectedNote": "TS 7 major merged with 21 checks passing and only package.json changed (https://github.com/Cacapice/AgentLedger/pull/23).",
+  "sources": "https://github.com/Cacapice/AgentLedger/pull/23",
+  "updates": [
+    {
+      "name": "typescript",
+      "from": "5.9.3",
+      "to": "7.0.2"
+    }
+  ]
+}

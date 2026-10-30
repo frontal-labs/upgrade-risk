@@ -1,0 +1,15 @@
+{
+  "id": "grabman1987-budget-pr779",
+  "repo": "Grabman1987/budget",
+  "pr": 779,
+  "expected": "risky",
+  "expectedNote": "Earlier TS 7.0.2 bump failed npm ci with ERESOLVE (typescript-eslint peer requires <6.1.0) and the repo imports the TS compiler API in apps/web/src/reports/chart-accessibility-555.test.ts; see https://github.com/Grabman1987/budget/pull/778 (ERESOLVE CI diagnosis on head edd63253) and https://github.com/Grabman1987/budget/pull/779.",
+  "sources": "https://github.com/Grabman1987/budget/pull/779",
+  "updates": [
+    {
+      "name": "typescript",
+      "from": "6.0.3",
+      "to": "7.0.2"
+    }
+  ]
+}

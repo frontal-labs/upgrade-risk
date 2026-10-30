@@ -1,0 +1,20 @@
+{
+  "id": "gleanary-gleanary-pr60",
+  "repo": "gleanary/gleanary",
+  "pr": 60,
+  "expected": "review",
+  "expectedNote": "Checks (Lint, Type-check, Unit, E2E) failed on 33e2951 because react-dom 19.3.1 conflicts with pinned react 19.2.8 (peer conflict, not an API break); PR later merged (https://github.com/gleanary/gleanary/pull/60).",
+  "sources": "https://github.com/gleanary/gleanary/pull/60",
+  "updates": [
+    {
+      "name": "react-dom",
+      "from": "19.2.8",
+      "to": "19.3.1"
+    },
+    {
+      "name": "@types/react-dom",
+      "from": "19.2.3",
+      "to": "19.3.0"
+    }
+  ]
+}

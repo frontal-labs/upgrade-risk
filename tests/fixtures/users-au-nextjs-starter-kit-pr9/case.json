@@ -1,0 +1,15 @@
+{
+  "id": "users-au-nextjs-starter-kit-pr9",
+  "repo": "Users-au/nextjs-starter-kit",
+  "pr": 9,
+  "expected": "risky",
+  "expectedNote": "Commit 'Run TypeScript 7 alongside the supported TypeScript 6 API' was added to the same PR after the bump, implying the TS 7 release dropped the JS compiler API the repo needs (https://github.com/Users-au/nextjs-starter-kit/pull/9, src/types/styles.d.ts changed).",
+  "sources": "https://github.com/Users-au/nextjs-starter-kit/pull/9",
+  "updates": [
+    {
+      "name": "typescript",
+      "from": "5.8.3",
+      "to": "7.0.2"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "getsentry-sentry-react-native-pr6960",
+  "repo": "getsentry/sentry-react-native",
+  "pr": 6960,
+  "expected": "safe",
+  "expectedNote": "Minor bump, merged with no breakage evidence; only a Danger changelog-format warning (https://github.com/getsentry/sentry-react-native/pull/6960).",
+  "sources": "https://github.com/getsentry/sentry-react-native/pull/6960",
+  "updates": [
+    {
+      "name": "qs",
+      "from": "6.16.0",
+      "to": "6.17.0"
+    }
+  ]
+}

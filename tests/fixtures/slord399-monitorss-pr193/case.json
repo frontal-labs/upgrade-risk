@@ -1,0 +1,15 @@
+{
+  "id": "slord399-monitorss-pr193",
+  "repo": "slord399/MonitoRSS",
+  "pr": 193,
+  "expected": "review",
+  "expectedNote": "Merged with checks passing; second-opinion bot said REVIEW_RECOMMENDED for a dev major bump (https://github.com/slord399/MonitoRSS/pull/193).",
+  "sources": "https://github.com/slord399/MonitoRSS/pull/193",
+  "updates": [
+    {
+      "name": "@mikro-orm/migrations",
+      "from": "6.6.16",
+      "to": "7.2.5"
+    }
+  ]
+}

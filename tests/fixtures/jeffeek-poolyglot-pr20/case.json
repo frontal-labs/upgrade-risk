@@ -1,0 +1,15 @@
+{
+  "id": "jeffeek-poolyglot-pr20",
+  "repo": "Jeffeek/poolyglot",
+  "pr": 20,
+  "expected": "risky",
+  "expectedNote": "Diff adds scripts/make-cts-dts.mjs and changes tsup/tsconfig because TS 7 ships no JS compiler API that tsup's rollup-plugin-dts needs; a fix was in the same PR (https://github.com/Jeffeek/poolyglot/pull/20 files: typescript/scripts/make-cts-dts.mjs, typescript/tsup.config.ts).",
+  "sources": "https://github.com/Jeffeek/poolyglot/pull/20",
+  "updates": [
+    {
+      "name": "typescript",
+      "from": "5.9.3",
+      "to": "7.0.2"
+    }
+  ]
+}

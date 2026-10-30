@@ -1,0 +1,15 @@
+{
+  "id": "xhoang0509-hotel-booking-pr137",
+  "repo": "xhoang0509/hotel-booking",
+  "pr": 137,
+  "expected": "review",
+  "expectedNote": "A 'test' check failed on the PR and it was merged anyway; cause not diagnosed (https://github.com/xhoang0509/hotel-booking/pull/137).",
+  "sources": "https://github.com/xhoang0509/hotel-booking/pull/137",
+  "updates": [
+    {
+      "name": "firebase",
+      "from": "13.0.0",
+      "to": "13.1.0"
+    }
+  ]
+}

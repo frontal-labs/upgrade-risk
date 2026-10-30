@@ -1,0 +1,15 @@
+{
+  "id": "mctlhq-mctl-design-pr177",
+  "repo": "mctlhq/mctl-design",
+  "pr": 177,
+  "expected": "safe",
+  "expectedNote": "Patch bump, merged with a Claude review finding no issues and no breakage evidence (https://github.com/mctlhq/mctl-design/pull/177).",
+  "sources": "https://github.com/mctlhq/mctl-design/pull/177",
+  "updates": [
+    {
+      "name": "@storybook/addon-vitest",
+      "from": "10.6.2",
+      "to": "10.6.3"
+    }
+  ]
+}

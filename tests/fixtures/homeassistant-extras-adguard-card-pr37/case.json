@@ -1,0 +1,15 @@
+{
+  "id": "homeassistant-extras-adguard-card-pr37",
+  "repo": "homeassistant-extras/adguard-card",
+  "pr": 37,
+  "expected": "review",
+  "expectedNote": "The check-fast-forward check failed (repo bot infra, not tests), so no breakage evidence either way; minor bump treated as review (https://github.com/homeassistant-extras/adguard-card/pull/37).",
+  "sources": "https://github.com/homeassistant-extras/adguard-card/pull/37",
+  "updates": [
+    {
+      "name": "js-yaml",
+      "from": "3.14.1",
+      "to": "3.15.2"
+    }
+  ]
+}

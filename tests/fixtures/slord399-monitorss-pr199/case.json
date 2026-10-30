@@ -1,0 +1,15 @@
+{
+  "id": "slord399-monitorss-pr199",
+  "repo": "slord399/MonitoRSS",
+  "pr": 199,
+  "expected": "review",
+  "expectedNote": "Merged with checks passing; second-opinion bot said REVIEW_RECOMMENDED for a production major (https://github.com/slord399/MonitoRSS/pull/199).",
+  "sources": "https://github.com/slord399/MonitoRSS/pull/199",
+  "updates": [
+    {
+      "name": "@mikro-orm/nestjs",
+      "from": "6.1.2",
+      "to": "7.1.0"
+    }
+  ]
+}

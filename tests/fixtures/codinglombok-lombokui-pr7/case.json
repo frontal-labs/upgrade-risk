@@ -1,0 +1,15 @@
+{
+  "id": "codinglombok-lombokui-pr7",
+  "repo": "codinglombok/LombokUI",
+  "pr": 7,
+  "expected": "review",
+  "expectedNote": "TS 7 major merged with 23 checks passing and no fix commit; the only comment is Socket's dependency report (https://github.com/codinglombok/LombokUI/pull/7).",
+  "sources": "https://github.com/codinglombok/LombokUI/pull/7",
+  "updates": [
+    {
+      "name": "typescript",
+      "from": "5.9.3",
+      "to": "7.0.2"
+    }
+  ]
+}

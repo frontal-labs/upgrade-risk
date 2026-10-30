@@ -1,0 +1,15 @@
+{
+  "id": "aws-samples-sample-awsops-pr217",
+  "repo": "aws-samples/sample-awsops",
+  "pr": 217,
+  "expected": "safe",
+  "expectedNote": "Patch bump, AI review passed with no blocking issues and checks green (https://github.com/aws-samples/sample-awsops/pull/217).",
+  "sources": "https://github.com/aws-samples/sample-awsops/pull/217",
+  "updates": [
+    {
+      "name": "postcss-selector-parser",
+      "from": "6.1.4",
+      "to": "6.1.5"
+    }
+  ]
+}

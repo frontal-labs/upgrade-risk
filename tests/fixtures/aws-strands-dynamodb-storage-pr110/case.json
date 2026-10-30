@@ -1,0 +1,15 @@
+{
+  "id": "aws-strands-dynamodb-storage-pr110",
+  "repo": "aws/strands-dynamodb-storage",
+  "pr": 110,
+  "expected": "review",
+  "expectedNote": "Merged with checks passing and no fix; only a Dependabot label warning in comments (https://github.com/aws/strands-dynamodb-storage/pull/110).",
+  "sources": "https://github.com/aws/strands-dynamodb-storage/pull/110",
+  "updates": [
+    {
+      "name": "typescript",
+      "from": "5.9.3",
+      "to": "6.0.3"
+    }
+  ]
+}
