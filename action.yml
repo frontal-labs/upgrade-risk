@@ -1,0 +1,45 @@
+name: 'Frontal Upgrade Risk'
+description: 'Posts breaking changes and the exact code that uses them on Dependabot and Renovate PRs.'
+author: 'Frontal Labs'
+branding:
+  icon: 'shield'
+  color: 'purple'
+
+inputs:
+  github-token:
+    description: 'Token used to read the PR and post the comment. Dependabot PRs need a Dependabot secret (see README).'
+    required: false
+    default: ${{ github.token }}
+  fail-on:
+    description: 'Fail the job when the overall risk is at or above this level: none, review or risky.'
+    required: false
+    default: 'none'
+  comment:
+    description: 'Post or update the sticky PR comment.'
+    required: false
+    default: 'true'
+  force:
+    description: 'Analyze PRs from any author, not only dependency bots.'
+    required: false
+    default: 'false'
+  tags:
+    description: 'Path to a JSON file that overrides labels from config/tags.json. Empty uses the defaults.'
+    required: false
+    default: ''
+  llm-api-key:
+    description: 'Anthropic API key. Enables LLM extraction for release notes the rules cannot parse.'
+    required: false
+  llm-model:
+    description: 'Model used with llm-api-key.'
+    required: false
+    default: 'claude-sonnet-5-5'
+
+outputs:
+  risk:
+    description: 'Overall risk level: safe, review, unknown or risky. Empty when the PR is skipped.'
+  report-path:
+    description: 'Path to the risk.json file written for this run.'
+
+runs:
+  using: 'node24'
+  main: 'dist/index.js'

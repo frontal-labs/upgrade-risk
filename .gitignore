@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Output directories
+output/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+
+# TypeScript
+*.tsbuildinfo
