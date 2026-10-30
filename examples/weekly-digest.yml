@@ -1,0 +1,55 @@
+name: Upgrade Risk Digest
+
+on:
+  schedule:
+    # Run every Monday at 1PM UTC (9AM EST)
+    - cron: '0 13 * * 1'
+  workflow_dispatch: # Allow manual trigger
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Generate upgrade risk digest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPOSITORY: ${{ github.repository }}
+        run: bun src/digest.ts --out ./output
+
+      - name: Upload digest artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: upgrade-risk-digest
+          path: ./output/slack-payload.json
+          retention-days: 7
+
+      - name: Post to Slack
+        if: always()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          # Plain curl: the webhook secret never reaches third-party action code.
+          curl --fail --silent --show-error \
+            --request POST \
+            --header 'Content-Type: application/json' \
+            --data @./output/slack-payload.json \
+            "$SLACK_WEBHOOK_URL"
