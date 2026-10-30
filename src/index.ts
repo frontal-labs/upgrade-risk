@@ -1,1 +1,10 @@
-export {}
+export { analyzePr, type AnalysisResult, type AnalyzeOptions } from './analyze'
+export { createCache, type Cache, type CacheMode } from './cache'
+export { renderComment, COMMENT_MARKER } from './comment'
+export { detectUpdates } from './detect'
+export { parseRiskReport, RiskReportSchema } from './schema'
+export { createGitHubSource, type GitHubSource } from './sources/github'
+export { createNpmSource, type NpmSource } from './sources/npm'
+export { scoreUpdate, bumpKind } from './score'
+export { findUsages } from './usage'
+export * from './types'

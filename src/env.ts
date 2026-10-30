@@ -7,6 +7,7 @@ export const env = createEnv({
     GITHUB_TOKEN: z.string().optional(),
     GH_REPOSITORY: z.string().optional(),
     GITHUB_REPOSITORY: z.string().optional(),
+    ANTHROPIC_API_KEY: z.string().optional(),
   },
   runtimeEnv: process.env,
   emptyStringAsUndefined: true,
