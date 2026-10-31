@@ -28,7 +28,7 @@ jobs:
         with:
           version: bun run version
           publish: bun run release
-          commitMode: github-api
+          createGithubReleases: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
