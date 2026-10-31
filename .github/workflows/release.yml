@@ -22,12 +22,12 @@ jobs:
       - run: bun run typecheck
       - run: bun run lint
       - run: bun test
-      - name: Create Release Pull Request or Publish to npm
+      - name: Release
         id: changesets
         uses: changesets/action@v1
         with:
           version: bun run version
-          publish: bun run release
+          publish: echo "skip"
           createGithubReleases: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
