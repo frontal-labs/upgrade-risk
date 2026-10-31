@@ -1,0 +1,4 @@
+{
+  "$schema": "./node_modules/ultracite/schema.json",
+  "extends": ["ultracite/config/biome/core"]
+}
