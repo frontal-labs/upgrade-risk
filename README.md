@@ -1,4 +1,6 @@
-# @frontal/upgrade-risk
+# Frontal Upgrade Risks
+
+![Frontal Banner](./banner.jpg)
 
 GitHub Action that posts one comment on every Dependabot or Renovate pull request. The comment lists the breaking changes between the old and new version of each updated npm package, and the exact `file:line` places in your repo that use the affected APIs. It also writes a machine-readable `risk.json`.
 
