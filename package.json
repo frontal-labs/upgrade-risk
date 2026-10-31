@@ -1,6 +1,6 @@
 {
   "name": "@frontal/upgrade-risk",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "GitHub Action to post upgrade risk analysis comments on Dependabot/Renovate PRs",
   "license": "MIT",
   "type": "module",
@@ -9,7 +9,9 @@
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "bun build src/action.ts --target=node --outfile dist/index.js",
     "build:cli": "bun build src/cli.ts --target=node --outfile dist/cli.js",
@@ -44,7 +46,9 @@
     "lint-staged": "^15.2.10"
   },
   "lint-staged": {
-    "*.{js,ts,json}": ["biome check --write --no-errors-on-unmatched"]
+    "*.{js,ts,json}": [
+      "biome check --write --no-errors-on-unmatched"
+    ]
   },
   "engines": {
     "bun": ">=1.0.0",
