@@ -4,30 +4,35 @@
   "description": "GitHub Action to post upgrade risk analysis comments on Dependabot/Renovate PRs",
   "license": "MIT",
   "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "bin": {
     "upgrade-risk": "./dist/cli.js"
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "bun build src/action.ts --target=node --outfile dist/index.js",
     "build:cli": "bun build src/cli.ts --target=node --outfile dist/cli.js",
-    "dev": "bun run src/cli.ts",
-    "eval": "bun run src/eval.ts",
-    "digest": "bun run src/digest.ts",
-    "lint": "biome ci .",
-    "format": "biome format --write .",
-    "typecheck": "tsc --noEmit",
-    "test": "bun test",
     "changeset": "changeset",
-    "version": "changeset version",
-    "release": "changeset publish",
-    "prepare": "husky",
     "check": "ultracite check",
-    "fix": "ultracite fix"
+    "dev": "bun run src/cli.ts",
+    "digest": "bun run src/digest.ts",
+    "eval": "bun run src/eval.ts",
+    "fix": "ultracite fix",
+    "format": "biome format --write .",
+    "lint": "biome ci .",
+    "prepare": "husky",
+    "release": "changeset publish",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "version": "changeset version"
+  },
+  "lint-staged": {
+    "*.{js,ts,json}": [
+      "biome check --write --no-errors-on-unmatched"
+    ]
   },
   "dependencies": {
     "@octokit/rest": "^21.0.2",
@@ -47,11 +52,6 @@
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "ultracite": "8.1.0"
-  },
-  "lint-staged": {
-    "*.{js,ts,json}": [
-      "biome check --write --no-errors-on-unmatched"
-    ]
   },
   "engines": {
     "bun": ">=1.0.0",

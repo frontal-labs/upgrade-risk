@@ -1,24 +1,26 @@
-import semver from 'semver'
-import type { BreakingChange, RiskLevel } from './types'
+import semver from "semver";
+import type { BreakingChange, RiskLevel } from "./types";
 
-export type BumpKind = 'patch' | 'minor' | 'major'
+export type BumpKind = "patch" | "minor" | "major";
 
 /** 0.x minor bumps are breaking under semver, so they count as major. */
 export function bumpKind(from: string, to: string): BumpKind {
-  const diff = semver.diff(from, to)
-  if (diff === 'patch' || diff === 'prepatch') return 'patch'
-  if (diff === 'minor' || diff === 'preminor') {
-    return semver.major(from) === 0 ? 'major' : 'minor'
+  const diff = semver.diff(from, to);
+  if (diff === "patch" || diff === "prepatch") {
+    return "patch";
   }
-  return 'major'
+  if (diff === "minor" || diff === "preminor") {
+    return semver.major(from) === 0 ? "major" : "minor";
+  }
+  return "major";
 }
 
 export interface ScoreInput {
-  from: string
-  to: string
-  breaking: BreakingChange[]
-  notesFound: boolean
-  typesFound: boolean
+  breaking: BreakingChange[];
+  from: string;
+  notesFound: boolean;
+  to: string;
+  typesFound: boolean;
 }
 
 /**
@@ -32,15 +34,27 @@ export interface ScoreInput {
  * - review: anything else, such as a major with only partial evidence.
  */
 export function scoreUpdate(input: ScoreInput): RiskLevel {
-  const { breaking, notesFound, typesFound } = input
+  const { breaking, notesFound, typesFound } = input;
 
-  if (breaking.some((change) => change.usages.length > 0)) return 'risky'
-  if (breaking.some((change) => change.symbols.length === 0)) return 'review'
-  if (!notesFound && !typesFound) return 'unknown'
-  if (breaking.length > 0) return 'safe'
+  if (breaking.some((change) => change.usages.length > 0)) {
+    return "risky";
+  }
+  if (breaking.some((change) => change.symbols.length === 0)) {
+    return "review";
+  }
+  if (!(notesFound || typesFound)) {
+    return "unknown";
+  }
+  if (breaking.length > 0) {
+    return "safe";
+  }
 
-  const kind = bumpKind(input.from, input.to)
-  if (kind !== 'major') return 'safe'
-  if (notesFound && typesFound) return 'safe'
-  return 'review'
+  const kind = bumpKind(input.from, input.to);
+  if (kind !== "major") {
+    return "safe";
+  }
+  if (notesFound && typesFound) {
+    return "safe";
+  }
+  return "review";
 }
