@@ -1,6 +1,6 @@
 {
   "name": "@frontal/upgrade-risk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "GitHub Action to post upgrade risk analysis comments on Dependabot/Renovate PRs",
   "license": "MIT",
   "type": "module",

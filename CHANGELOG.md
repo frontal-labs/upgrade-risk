@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+### Patch Changes
+
+- Convert `action.yml` from a `node24` action to a composite action. `dist/` is gitignored, so the bundled `dist/index.js` was never present in the release tag and the action failed at load time. The composite action now installs dependencies and builds the entrypoint in-job, and exposes the `with:` inputs to the bundled entrypoint the same way the node24 runner does. The `github-token` input no longer defaults to `${{ github.token }}`; it falls back to the workflow's `GITHUB_TOKEN`.
+
 ## 0.1.1
 
 ### Patch Changes
