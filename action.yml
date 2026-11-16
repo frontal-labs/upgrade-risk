@@ -61,7 +61,9 @@ runs:
       run: |
         cd "$ACTION_PATH"
         if [ ! -d node_modules/@octokit ]; then
-          bun install --frozen-lockfile --production
+          # --ignore-scripts: the package's "prepare" script runs husky (a dev
+          # tool, not a runtime dependency); we only need the runtime deps.
+          bun install --frozen-lockfile --production --ignore-scripts
         fi
         if [ ! -f dist/index.js ]; then
           bun run build

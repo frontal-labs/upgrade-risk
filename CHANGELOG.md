@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.3
+
+### Patch Changes
+
+- Add `--ignore-scripts` to the composite action's `bun install`. The package's
+  `prepare` script runs `husky` (a dev tool, not a runtime dependency), so
+  `bun install --production` exited 127 with "husky: command not found" before
+  the entrypoint could build or run.
+
 ## 0.1.2
 
 ### Patch Changes
