@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1
+
+### Patch Changes
+
+- Fix Biome 2 configuration (`files.includes` schema keys, rule overrides for legitimate namespace imports and bitwise operator usage) so `bun run lint` passes in CI.
+- Apply Biome autofix across the codebase (quote style, semicolons, object key sorting); no behavioral changes.
+
 ## 0.1.0
 
 ### Minor Changes
